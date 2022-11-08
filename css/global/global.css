@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  max-width: 100%;
+}
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.vazamento-grid {
+  max-width: 87.5rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+img[src$=".webp"] {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+img[src$='.svg'] {
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  word-break: break-all;
+}
+.link {
+  width: 32px;
+}
+.alinhamento h3 {
+  padding: .2rem;
+  text-align: center;
+}
+@media (max-width: 12.625rem) {
+  /*202px*/
+  * {
+    word-break: break-all;
+  }
+}

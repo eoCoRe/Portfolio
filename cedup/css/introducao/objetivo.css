@@ -1,0 +1,80 @@
+.objetivo-bg {
+  background-color: var(--destaque-1);
+}
+.objetivo {
+  margin-top: 3.75rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 2rem;
+  grid-template-areas:
+    "missao-img missao missao"
+    "visao visao visao-img"
+    "ensino-img ensino ensino";
+}
+.objetivo p {
+  max-width: 900px;
+}
+/*Colocando os itens no grid area*/
+.missao {
+  grid-area: missao;
+}
+.visao {
+  grid-area: visao;
+  text-align: right;
+}
+.ensino {
+  grid-area: ensino;
+}
+.missao-img {
+  grid-area: missao-img;
+}
+.visao-img {
+  grid-area: visao-img;
+}
+.ensino-img {
+  grid-area: ensino-img;
+}
+.missao-img,
+.visao-img,
+.ensino-img {
+  display: grid;
+  justify-items: center;
+}
+.objetivo img[src$='.svg'] {
+  max-width: 160px;
+}
+@media (max-width: 50rem) {
+  /*800px*/
+  .objetivo {
+    grid-template-areas:
+    "missao-img"
+    "missao"
+    "visao-img"
+    "visao"
+    "ensino-img"
+    "ensino";
+    text-align: center;
+  }
+  .objetivo p {
+    margin: -1rem 0 1rem 0;
+  }
+  .visao {
+    text-align: inherit;
+  }
+  .objetivo img[src$='.svg'] {
+    width: 140px;
+  }
+}
+@media (max-width: 25rem) {
+  /*400px*/
+  .objetivo img[src$='.svg'] {
+    max-width: 110px;
+  }
+}
+@media (max-width: 12.625rem) {
+  /*202px*/
+  .objetivo img[src$='.svg'] {
+    max-width: 80px;
+  }
+}

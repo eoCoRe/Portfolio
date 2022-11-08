@@ -1,0 +1,18 @@
+.img-cedup {
+  background: url('../../img/img-introducao.webp') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 30rem;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .2), inset -2px 2px 4px rgba(0, 0, 0, .2);
+}
+.main h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 50rem) {
+  /*800px*/
+  .img-cedup {
+    display: none;
+  }
+}

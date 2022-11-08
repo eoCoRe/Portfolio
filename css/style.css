@@ -1,0 +1,19 @@
+/*global*/
+@import url('./global/global.css');
+@import url('./global/header.css');
+@import url('./global/footer.css');
+/*introducao*/
+@import url('./introducao/introducao.css');
+@import url('./introducao/objetivo.css');
+/*cursos*/
+@import url('./cursos/cursos.css');
+/*vagas*/
+@import url('./vagas/vagas.css');
+/*notícias*/
+@import url('./noticias/noticias.css');
+@import url('./noticias/noticias2.css');
+/*palestras*/
+@import url('./lista-videos/lista-videos.css');
+/*utilidades*/
+@import url('./utilidades/tipografia.css');
+@import url('./utilidades/cor.css');

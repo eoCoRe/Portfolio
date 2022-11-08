@@ -1,0 +1,90 @@
+/*Resultado Preliminar*/
+.resultado-bg {
+  background: linear-gradient(
+    to bottom,
+    var(--destaque-1) 80%,
+    var(--cor-0) 0%
+  );
+}
+.noticias-2 {
+  margin-top: 7.5rem;
+  margin-bottom: 3.75rem;
+}
+.resultado-item {
+  border: 1px solid var(--destaque-2);
+  border-radius: 4px;
+  width: 100%;
+}
+.resultado-link a {
+  padding: 0.5rem;
+}
+.grid-resultado {
+  margin-top: 2rem;
+  display: grid;
+}
+.grid-resultado .resultado-link {
+  visibility: hidden;
+  margin-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  grid-area: 1/1;
+  z-index: 1;
+  place-self: start end;
+  transition: 0.2s;
+}
+.grid-resultado:hover .resultado-link {
+  visibility: visible;
+  padding: 0.5rem;
+}
+.grid-resultado .resultado-item {
+  grid-area: 1/1;
+}
+/*Jogos Escolares e Arraial*/
+.eventos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.escolares,
+.arraial {
+  background-color: var(--destaque-2-l);
+}
+.escolares h2,
+.arraial h2 {
+  text-align: center;
+  margin: 1rem 0;
+}
+.escolares-grid,
+.arraial-grid {
+  display: grid;
+  overflow: hidden;
+}
+.escolares-grid img,
+.arraial-grid img {
+  grid-area: 1/1;
+}
+.escolares-grid a,
+.arraial-grid a {
+  grid-area: 1/1;
+  margin-right: -0.5rem;
+  margin-top: 2rem;
+  border-radius: 4px;
+  padding: 1rem;
+  place-self: start end;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.2s;
+}
+.escolares-grid a:hover,
+.arraial-grid a:hover {
+  margin-right: 0;
+}
+@media (max-width: 50rem) {
+  /*800px*/
+  .noticias-2 {
+    margin-top: 3.75rem;
+  }
+  .escolares-grid a,
+  .arraial-grid a {
+    padding: 0.5rem;
+  }
+}

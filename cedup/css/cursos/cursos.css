@@ -1,0 +1,90 @@
+.cursos-tecnicos {
+  margin-top: 3.75rem;
+}
+.cursos-tecnicos h1 {
+  margin-bottom: 3.75rem;
+}
+.cursos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+.cursos h2 {
+  margin-bottom: 1rem;
+}
+.pos,
+.medio {
+  background-color: var(--destaque-2-l);
+  padding: 1rem 2rem 2rem 2rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.medio {
+  height: max-content;
+}
+.pos h2,
+.medio h2 {
+  text-align: center;
+}
+.cursos li + li {
+  margin-top: 1rem;
+}
+/*Decorador da Lista*/
+.pos li::before,
+.medio li::before {
+  content: "";
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 6px;
+  width: 12px;
+  height: 3px;
+  background-color: var(--destaque-2-ct);
+}
+.medio li::before {
+  background-color: var(--destaque-2);
+}
+@media (max-width: 50rem) {
+  /*800*/
+  .cursos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  li + li {
+    margin: 0;
+  }
+  .pos-medio,
+  .medio-integrado {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .pos h2,
+  .medio h2 {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 37.5rem) {
+  /*600px*/
+  .pos-medio,
+  .medio-integrado {
+    grid-template-columns: 1fr;
+  }
+  .pos,
+  .medio {
+    padding: 1rem;
+    white-space: inherit;
+  }
+}
+@media (max-width: 25rem) {
+  /*400px*/
+  .pos li::before,
+  .medio li::before {
+    width: 5px;
+  }
+}
+@media (max-width: 15.625rem) {
+  /*250px*/
+  .pos, .medio {
+    margin-left: -1rem;
+  }
+}

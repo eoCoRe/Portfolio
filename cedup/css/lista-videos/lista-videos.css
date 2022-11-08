@@ -1,0 +1,83 @@
+.palestras-bg {
+  background-color: var(--destaque-1);
+}
+.palestras,
+.depoimentos {
+  margin-top: 7.5rem;
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  grid-template-columns: auto 1fr;
+}
+.depoimentos {
+  margin-top: 3.75rem;
+  margin-bottom: 3.75rem;
+}
+.palestras h1 {
+  text-transform: uppercase;
+  word-break: break-all;
+  max-width: 6ch;
+}
+.depoimentos h1 {
+  text-transform: uppercase;
+  word-break: break-all;
+  max-width: 5.5ch;
+}
+.lista-videos {
+  border-radius: 4px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  overflow: scroll;
+  gap: 1.5rem;
+  min-width: 5rem;
+}
+.lista-videos li {
+  background-color: var(--cor-0);
+  border-radius: 4px;
+}
+.lista-videos img {
+  max-width: max-content;
+  height: 20rem;
+  border-radius: 4px 4px 0 0;
+}
+/*Classe especial para manter as imagens irregulares do mesmo tamanho*/
+.imagem-diferente {
+  width: 30rem;
+  height: 20rem;
+  border-radius: 4px 4px 0 0;
+}
+@media (max-width: 50rem) {
+  /*800px*/
+  .palestras,
+  .depoimentos {
+    grid-template-columns: 1fr;
+  }
+  .palestras h1,
+  .depoimentos h1 {
+    font-size: 5rem;
+    text-transform: capitalize;
+    max-width: initial;
+  }
+  .lista-videos img {
+    max-width: max-content;
+    height: 10rem;
+    border-radius: 4px 4px 0 0;
+  }
+  .imagem-diferente {
+    width: 20rem;
+    height: 10rem;
+    border-radius: 4px 4px 0 0;
+  }
+  .depoimentos img {
+    width: 20rem;
+    height: 10rem;
+  }
+}
+@media (max-width: 33.75rem) {
+  /*540*/
+  .palestras h1,
+  .depoimentos h1 {
+    font-size: 3rem;
+  }
+}

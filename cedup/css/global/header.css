@@ -1,0 +1,122 @@
+.header-bg {
+  background-color: var(--destaque-1);
+  padding-bottom: .5rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.menu {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.menu a {
+  padding: 0.5rem;
+  position: relative;
+}
+/*Animação Sublinhado no Desktop*/
+.menu a::after {
+  content: "";
+  display: block;
+  margin-top: 0.3rem;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor-0);
+  transition: 0.3s;
+}
+.menu a:hover::after,
+.menu a.ativa::after {
+  width: 100%;
+}
+button {
+  display: none;
+  background: var(--destaque-2);
+  border-radius: 4px;
+}
+@media (max-width: 50rem) {
+  /*800px*/
+  .menu a {
+    display: block;
+    margin: 1rem;
+    border-radius: 4px;
+    border-bottom: 1px solid var(--destaque-2);
+  }
+  .menu a::after {
+    display: none;
+  }
+  .menu a:hover {
+    background-color: var(--destaque-2);
+  }
+  /*Animação Menu*/
+  .menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    margin-top: 1rem;
+    background-color: var(--destaque-1);
+    overflow: hidden;
+    z-index: 1;
+    padding: 1rem;
+    height: 0;
+    visibility: hidden;
+    transition: 0.6s;
+  }
+  .nav.ativo .menu {
+    visibility: visible;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  button {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  /*Animação Menu Hamburguer para X*/
+  .hamburguer {
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+  }
+  .hamburguer::after,
+  .hamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  .nav.ativo .hamburguer {
+    border-top-color: transparent;
+  }
+  .nav.ativo .hamburguer::before {
+    transform: rotate(135deg);
+  }
+  .nav.ativo .hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+@media (max-width: 25rem) {
+  /*400px*/
+  .logo img {
+    display: none;
+  }
+  .header-bg {
+    padding-bottom: 2rem;
+  }
+  .header {
+    padding-top: 2rem;
+  }
+}
